@@ -10,43 +10,12 @@ The intended foundation is not a conventional language generator. Natural langua
 
 ## Proposed layers — visual overview
 
-```mermaid
-flowchart TB
-    IN(["Input · observation · goal"]) --> C["Context and state"]
-    C --> CE["Concentration engine"]
-    CE --> ROUTE["Select relevant formulae and paths"]
+![Formula-Network Intelligence Architecture diagram](formula-network-intelligence.svg)
 
-    subgraph CORE["Connected components — not a rigid sequence"]
-      direction LR
-      F["Fundamental building blocks"]
-      FL["Formula library"]
-      RF["Reasoning formulae"]
-      EM["Motivation / sensitivity control"]
-      OUT["Output and action"]
-    end
-
-    FW(("SHARED FRAMEWORK<br/>relations · difference · identity<br/>change · time · value · uncertainty"))
-    F <--> FW
-    FL <--> FW
-    RF <--> FW
-    C <--> FW
-    EM <--> FW
-    CE <--> FW
-    OUT <--> FW
-
-    FL --> ROUTE
-    RF --> ROUTE
-    F --> ROUTE
-    ROUTE --> RUN["Execute selected paths within budgets"]
-    RUN --> EVAL["Evaluate result and uncertainty"]
-    EVAL --> OUT
-    EVAL -->|insufficient evidence| C
-    EVAL -->|trace, errors, cost| MAINT["Maintenance and learning"]
-    MAINT -->|tested changes| ROUTE
-    OUT -->|new observation / effect| C
-```
+[Open the architecture diagram directly](formula-network-intelligence.svg).
 
 ### Component cards
+
 
 <details>
 <summary>Fundamental building blocks</summary>
