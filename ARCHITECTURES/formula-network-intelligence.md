@@ -8,15 +8,96 @@ Build one general execution environment from independently executable formulae a
 
 The intended foundation is not a conventional language generator. Natural language is a learned interface layer that maps human expressions to internal representations and renders verified results. The system's primary internal work may involve quantities, entities, relations, conditions, hypotheses, state changes, and executable operations.
 
-## Proposed layers
+## Proposed layers — visual overview
 
-1. **Fundamental building blocks** — a domain-general construction foundation for distinguishable units/primitives, properties, states, configurations, and constraints. It should support physical and chemical structures, mathematical objects, symbols and encodings, patterns, abstract concepts, and imaginary or hypothetical constructions. Human-readable characters, numbers, and symbols are one input/output application, not the layer's definition. The system may propose new primitives when existing ones cannot adequately express a demonstrated need. A generated construction is not automatically valid or real; domain constraints, provenance, and validation remain explicit. See [Fundamental Building Blocks](../CONCEPTS/fundamental-building-blocks.md).
-2. **Formula library** — executable units with inputs, outputs, preconditions, operations, dependencies, and metadata.
-3. **Reasoning formulae** — operations for forming hypotheses, chaining rules, comparing alternatives, deriving relationships, and constructing paths.
-4. **Context and state** — relevant task information, entities, relationships, assumptions, constraints, and current state.
-5. **Emotion/motivation control** — engineered variables such as urgency, caution, sensitivity, curiosity, persistence, and creative exploration. These are functional control variables, not evidence of subjective feelings.
-6. **Concentration engine** — supervisory process that inspects traces, identifies errors and redundant work, reorganizes context, proposes structural optimizations, tests changes, and reduces unnecessary computation. It may run during an explicit idle/maintenance phase.
-7. **Output and action** — typed results such as numbers, structures, natural language, visualizations, tool calls, or robot actions.
+```mermaid
+flowchart TB
+    IN(["Input · observation · goal"]) --> C["Context and state"]
+    C --> CE["Concentration engine"]
+    CE --> ROUTE["Select relevant formulae and paths"]
+
+    subgraph CORE["Connected components — not a rigid sequence"]
+      direction LR
+      F["Fundamental building blocks"]
+      FL["Formula library"]
+      RF["Reasoning formulae"]
+      EM["Motivation / sensitivity control"]
+      OUT["Output and action"]
+    end
+
+    FW(("SHARED FRAMEWORK<br/>relations · difference · identity<br/>change · time · value · uncertainty"))
+    F <--> FW
+    FL <--> FW
+    RF <--> FW
+    C <--> FW
+    EM <--> FW
+    CE <--> FW
+    OUT <--> FW
+
+    FL --> ROUTE
+    RF --> ROUTE
+    F --> ROUTE
+    ROUTE --> RUN["Execute selected paths within budgets"]
+    RUN --> EVAL["Evaluate result and uncertainty"]
+    EVAL --> OUT
+    EVAL -->|insufficient evidence| C
+    EVAL -->|trace, errors, cost| MAINT["Maintenance and learning"]
+    MAINT -->|tested changes| ROUTE
+    OUT -->|new observation / effect| C
+```
+
+### Component cards
+
+<details>
+<summary>Fundamental building blocks</summary>
+
+Construct and represent distinguishable units, properties, states, configurations, constraints, and candidate primitives across physical, chemical, mathematical, symbolic, abstract, and hypothetical domains. Generated candidates still need domain validation.
+
+</details>
+
+<details>
+<summary>Formula library</summary>
+
+Reusable executable operations with typed inputs and outputs, preconditions, dependencies, metadata, and traceable effects.
+
+</details>
+
+<details>
+<summary>Reasoning formulae</summary>
+
+Operations for forming hypotheses, chaining rules, comparing alternatives, deriving relationships, and constructing paths.
+
+</details>
+
+<details>
+<summary>Context and state</summary>
+
+Relevant task information, entities, relationships, assumptions, constraints, evidence, time, and current state.
+
+</details>
+
+<details>
+<summary>Emotion / motivation control</summary>
+
+Functional control variables such as urgency, caution, sensitivity, curiosity, persistence, and creative exploration.
+
+</details>
+
+<details>
+<summary>Concentration engine</summary>
+
+Supervises routing and resource allocation; inspects traces, identifies errors and redundant work, and proposes bounded optimizations for testing.
+
+</details>
+
+<details>
+<summary>Output and action</summary>
+
+Returns typed results such as numbers, structures, natural language, visualizations, tool calls, or robot actions.
+
+</details>
+
+The **Framework is shared across all components**, not a final stage. The runtime activates only the units and paths relevant to the current task. The cards are a compact visual index; the detailed execution, maintenance, constraints, and evaluation specifications follow below.
 
 ## Cross-cutting capabilities
 
