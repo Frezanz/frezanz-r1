@@ -10,7 +10,7 @@ The intended foundation is not a conventional language generator. Natural langua
 
 ## Proposed layers
 
-1. **Fundamental symbols and quantities** — multilingual characters, numbers, units, symbols, signals, and type definitions.
+1. **Fundamental building blocks** — a domain-general construction foundation for distinguishable units/primitives, properties, states, configurations, and constraints. It should support physical and chemical structures, mathematical objects, symbols and encodings, patterns, abstract concepts, and imaginary or hypothetical constructions. Human-readable characters, numbers, and symbols are one input/output application, not the layer's definition. The system may propose new primitives when existing ones cannot adequately express a demonstrated need. A generated construction is not automatically valid or real; domain constraints, provenance, and validation remain explicit. See [Fundamental Building Blocks](../CONCEPTS/fundamental-building-blocks.md).
 2. **Formula library** — executable units with inputs, outputs, preconditions, operations, dependencies, and metadata.
 3. **Reasoning formulae** — operations for forming hypotheses, chaining rules, comparing alternatives, deriving relationships, and constructing paths.
 4. **Context and state** — relevant task information, entities, relationships, assumptions, constraints, and current state.
