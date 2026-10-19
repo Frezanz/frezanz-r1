@@ -24,15 +24,30 @@ The layer should support representations/building blocks for:
 
 These are overlapping domains and candidate categories, not a mandate to create one sub-layer for each.
 
-## Candidate responsibilities
+## First-layer mind map
 
-1. Represent constituents across fields: particles, electrons, atoms, elements, chemical and mechanical components, mathematical objects, patterns, abstractions, and symbolic characters including letters, numbers, and operators.
-2. Apply each field’s real-world rules to its constituents and constructions.
-3. Allow rules to be changed, collapsed, removed, or replaced to explore other constructions.
-4. Combine and transform constituents, and propose new ones when needed.
-5. Use the shared Framework’s reasoning hypotheses and mechanisms with real observations and estimates to generate outputs; preserve distinctions between observed, estimated, inferred, and invented information.
-
-These responsibilities are candidates to test and refine.
+```mermaid
+mindmap
+  root((Fundamental Layer))
+    Constituents
+      Physical: particles, electrons, atoms, elements
+      Chemical and mechanical components
+      Mathematical objects and patterns
+      Abstract concepts
+      Symbols: letters, numbers, operators
+    Construction
+      Combine and transform
+      Properties, states, configurations
+      Propose new constituents
+    Rules
+      Apply each field’s real-world rules
+      Change, collapse, remove, or replace rules
+    Framework connection
+      Reasoning hypotheses and mechanisms
+      Real observations and estimates
+      Generate outputs
+      Distinguish observed, estimated, inferred, invented
+```
 
 ## Important distinctions
 
