@@ -113,3 +113,131 @@ This process may run during sleep-like/idle mode, but it does not imply that con
 ## Evidence status
 
 All architecture details here are proposals. They should be treated as hypotheses until implemented and compared with baselines under controlled tests.
+
+
+---
+
+## Visual architecture — whole-system map
+
+This is the architecture at a glance. The **Framework is the shared relational foundation**, not an extra stage that sits after the other layers. The runtime activates only the units and paths relevant to the current task.
+
+```mermaid
+flowchart TD
+    IN["Input / observation / goal"] --> REP["Representation & context update"]
+    F["FUNDAMENTAL BUILDING BLOCKS<br/>units · properties · states · configurations · constraints"] <--> FW
+    FL["FORMULA LIBRARY<br/>typed executable operations"] <--> FW
+    RF["REASONING FORMULAE<br/>hypotheses · comparisons · derivations"] <--> FW
+    CTX["CONTEXT & STATE<br/>relations · assumptions · time · evidence"] <--> FW
+    EM["EMOTION / MOTIVATION CONTROL<br/>urgency · caution · curiosity · sensitivity"] <--> FW
+    CE["CONCENTRATION ENGINE<br/>attention · routing · trace inspection · budget"] <--> FW
+    OUT["OUTPUT & ACTION<br/>answers · structures · visualizations · tool actions"] <--> FW
+
+    FW(("SHARED FRAMEWORK<br/>RELATIONS · DIFFERENCE · IDENTITY · CHANGE<br/>CAUSE · TIME · VALUE · UNCERTAINTY"))
+    REP --> F
+    REP --> CTX
+    CTX --> CE
+    EM --> CE
+    CE --> ROUTE["Select relevant formulae & paths"]
+    FL --> ROUTE
+    RF --> ROUTE
+    ROUTE --> RUN["Execute within constraints"]
+    RUN --> STATE["Propagate results / update state"]
+    STATE --> EVAL["Evaluate against evidence & task goal"]
+    EVAL --> OUT
+    EVAL -->|uncertain or insufficient| ASK["Ask for information / abstain / explore"]
+    ASK --> REP
+    EVAL -->|trace + error + cost| MAINT["Concentration / maintenance loop"]
+    MAINT -->|tested bounded improvement| ROUTE
+    OUT -->|new input or observed effect| REP
+
+    classDef foundation fill:#dceafe,stroke:#3972b8,color:#10233f
+    classDef processing fill:#e4f4e8,stroke:#38865b,color:#102d1b
+    classDef control fill:#fff0d6,stroke:#b7791f,color:#422b08
+    classDef feedback fill:#f0e4ff,stroke:#8552b5,color:#2c1645
+    class F,FL,RF,CTX foundation
+    class FW,REP,ROUTE,RUN,STATE processing
+    class EM,CE control
+    class OUT,EVAL,ASK,MAINT feedback
+```
+
+## Component cards — responsibilities and connections
+
+These are connected components, not isolated sequential layers. Each card states its role, exchanges, and questions the implementation must answer.
+
+| Component | Role | Connects to / exchanges | Questions to test |
+|---|---|---|---|
+| **Fundamental building blocks** | Construct or represent units, properties, states, configurations, constraints, and candidate primitives across domains | Shared Framework; input representation; formulae | How is a candidate represented, combined, transformed, and validated? |
+| **Formula library** | Reusable operations with typed inputs, outputs, preconditions, dependencies, and traceable effects | Framework; reasoning formulae; runtime | How are formulae selected, composed, reused, and stopped? |
+| **Reasoning formulae** | Build and compare hypotheses, derive relations, and construct candidate paths | Formula library; context/state; evaluation | Which steps are supported by evidence, and which are only hypotheses? |
+| **Context and state** | Hold relevant entities, relations, assumptions, observations, history, and time-dependent changes | Every active component through the Framework | What remains relevant, what changed, and what is unknown? |
+| **Emotion / motivation control** | Functional control signals for urgency, caution, curiosity, sensitivity, and exploration | Concentration engine; routing and budgets | Do these signals change priorities predictably and help task outcomes? |
+| **Concentration engine** | Allocate attention and computation, inspect traces, detect waste, and propose bounded improvements | Formula paths; runtime; evaluation; maintenance loop | Which paths deserve resources, and when should execution stop? |
+| **Output and action** | Return typed results, explanations, structures, visualizations, or permitted actions | Evaluation; external environment; new input | Does the result satisfy the goal, and can its basis be inspected? |
+| **Shared Framework** | The common relational foundation connecting all components; not a separate stage | Relations and updates across every component | Can new relations change what the system can represent or do? |
+| **Evaluation and evidence** | Compare outputs with goals, observations, constraints, uncertainty, and baselines | Runtime traces; output; maintenance | Is the result correct, calibrated, efficient, and generalizable? |
+| **Maintenance / learning loop** | Inspect failures and costs; propose one bounded change; test before acceptance | Traces; benchmarks; routing; reusable formulae | Does the change improve held-out results without regressions? |
+
+## Execution path — one request
+
+```mermaid
+flowchart LR
+    A["Receive goal + input"] --> B["Represent what is known"]
+    B --> C["Connect relevant context through Framework"]
+    C --> D["Route to candidate formulae / paths"]
+    D --> E["Execute under time, compute, and permission budgets"]
+    E --> F["Propagate results and state changes"]
+    F --> G["Evaluate evidence, uncertainty, and goal"]
+    G --> H{"Enough support?"}
+    H -->|Yes| I["Return typed output"]
+    H -->|No| J["Ask · abstain · or explore"]
+    J --> B
+    I --> K["Record trace, cost, and outcome"]
+    K -. "later tested maintenance" .-> D
+```
+
+## Mind map — research and implementation
+
+```mermaid
+mindmap
+  root((Formula-Network Intelligence))
+    Shared Framework
+      Relations and differences
+      Identity and change
+      Time and causality
+      Evidence and uncertainty
+    Constructive components
+      Fundamental building blocks
+      Formula library
+      Reasoning formulae
+      Context and state
+      Motivation control
+      Concentration engine
+      Output and action
+    Runtime
+      Selective routing
+      Execute formula paths
+      Propagate state
+      Budget and stop rules
+      Trace every result
+    Feedback
+      Evaluate against evidence
+      Detect errors and unknowns
+      Record compute and latency
+      Propose bounded changes
+      Test and rollback
+    Research sequence
+      Deterministic formula execution
+      Dependency graph and trace viewer
+      Context and temporal relations
+      Path selection and budgets
+      Baselines and benchmarks
+      Adaptive composition
+      Natural-language interface and UI
+```
+
+## How to read the visual
+
+- **Solid arrows** show the proposed request/execution/feedback flow; two-way links to the Framework show shared relational exchange.
+- **The Framework is central and cross-cutting**: it relates components rather than acting as a one-time processing step.
+- **The cards are a reading interface**; the runtime is a connected network whose active path depends on the task.
+- This is a research proposal. The diagram expresses the intended architecture, not proof that these capabilities already work.
