@@ -26,28 +26,9 @@ These are overlapping domains and candidate categories, not a mandate to create 
 
 ## First-layer mind map
 
-```mermaid
-mindmap
-  root((Fundamental Layer))
-    Constituents
-      Physical: particles, electrons, atoms, elements
-      Chemical and mechanical components
-      Mathematical objects and patterns
-      Abstract concepts
-      Symbols: letters, numbers, operators
-    Construction
-      Combine and transform
-      Properties, states, configurations
-      Propose new constituents
-    Rules
-      Apply each field’s real-world rules
-      Change, collapse, remove, or replace rules
-    Framework connection
-      Reasoning hypotheses and mechanisms
-      Real observations and estimates
-      Generate outputs
-      Distinguish observed, estimated, inferred, invented
-```
+![Fundamental Building Blocks — first-layer mind map](fundamental-building-blocks.svg)
+
+[Open the first-layer mind map image](fundamental-building-blocks.svg).
 
 ## Important distinctions
 

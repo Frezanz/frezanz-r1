@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1120" viewBox="0 0 1400 1120" role="img" aria-labelledby="title desc">
+<title id="title">Fundamental Building Blocks — First Layer Mind Map</title>
+<desc id="desc">Mind map of constituents, construction, rules, and framework connection for the first layer, not the overall model layers.</desc>
+<defs>
+ <style>
+ text{font-family:Arial,Helvetica,sans-serif;fill:#18243a}
+ .root{fill:#e7ddff;stroke:#7756bd;stroke-width:3}
+ .branch{fill:#f4f8ff;stroke:#6b91c8;stroke-width:2.5}
+ .sub{fill:#fff;stroke:#9aabc2;stroke-width:2}
+ .title{font-size:32px;font-weight:700}
+ .head{font-size:24px;font-weight:700}
+ .body{font-size:19px}
+ .line{fill:none;stroke:#8a9db8;stroke-width:5;stroke-linecap:round}
+ </style>
+</defs>
+<rect width="1400" height="1120" fill="#ffffff" rx="26"/>
+<text x="700" y="54" text-anchor="middle" class="title">FIRST LAYER · FUNDAMENTAL BUILDING BLOCKS</text>
+<text x="700" y="86" text-anchor="middle" class="body">What can be represented, constructed, transformed, and explored?</text>
+
+<!-- branch connections -->
+<path class="line" d="M700 555 C570 555 555 230 445 230"/>
+<path class="line" d="M700 555 C560 555 555 500 445 500"/>
+<path class="line" d="M700 555 C850 555 850 230 955 230"/>
+<path class="line" d="M700 555 C850 555 850 790 955 790"/>
+
+<!-- left upper: constituents -->
+<rect x="55" y="125" width="390" height="76" rx="20" class="branch"/>
+<text x="250" y="172" text-anchor="middle" class="head">CONSTITUENTS</text>
+<rect x="55" y="218" width="390" height="220" rx="18" class="sub"/>
+<text x="82" y="255" class="body">• Physical: particles, matter, energy</text>
+<text x="82" y="293" class="body">• Chemical and mechanical components</text>
+<text x="82" y="331" class="body">• Mathematical objects and patterns</text>
+<text x="82" y="369" class="body">• Abstract concepts and qualities</text>
+<text x="82" y="407" class="body">• Symbols: letters, numbers, operators</text>
+
+<!-- left lower: construction -->
+<rect x="55" y="455" width="390" height="76" rx="20" class="branch"/>
+<text x="250" y="502" text-anchor="middle" class="head">CONSTRUCTION</text>
+<rect x="55" y="548" width="390" height="180" rx="18" class="sub"/>
+<text x="82" y="588" class="body">• Combine and transform units</text>
+<text x="82" y="628" class="body">• Define properties and states</text>
+<text x="82" y="668" class="body">• Arrange configurations and patterns</text>
+<text x="82" y="708" class="body">• Propose new candidate primitives</text>
+
+<!-- center root -->
+<rect x="485" y="445" width="430" height="220" rx="34" class="root"/>
+<text x="700" y="500" text-anchor="middle" class="head">FUNDAMENTAL LAYER</text>
+<text x="700" y="543" text-anchor="middle" class="body">Units · properties · states</text>
+<text x="700" y="577" text-anchor="middle" class="body">Relations · configurations · constraints</text>
+<text x="700" y="621" text-anchor="middle" class="body">Build beyond predefined inventory</text>
+
+<!-- right upper: rules -->
+<rect x="955" y="125" width="390" height="76" rx="20" class="branch"/>
+<text x="1150" y="172" text-anchor="middle" class="head">RULES</text>
+<rect x="955" y="218" width="390" height="220" rx="18" class="sub"/>
+<text x="982" y="255" class="body">• Apply relevant domain rules</text>
+<text x="982" y="293" class="body">• Track constraints and conditions</text>
+<text x="982" y="331" class="body">• Change, remove, or replace rules</text>
+<text x="982" y="369" class="body">• Separate imagined from physical</text>
+<text x="982" y="407" class="body">• Validate candidates before trusting</text>
+
+<!-- right lower: framework connection -->
+<rect x="955" y="690" width="390" height="76" rx="20" class="branch"/>
+<text x="1150" y="737" text-anchor="middle" class="head">FRAMEWORK CONNECTION</text>
+<rect x="955" y="783" width="390" height="180" rx="18" class="sub"/>
+<text x="982" y="823" class="body">• Relate units, differences, identities</text>
+<text x="982" y="863" class="body">• Use observations and estimates</text>
+<text x="982" y="903" class="body">• Connect reasoning hypotheses</text>
+<text x="982" y="943" class="body">• Tag observed / inferred / invented</text>
+
+<rect x="485" y="735" width="430" height="105" rx="20" fill="#e4f4e9" stroke="#398260" stroke-width="2.5"/>
+<text x="700" y="776" text-anchor="middle" class="head">Candidate construction</text>
+<text x="700" y="808" text-anchor="middle" class="body">Compose → transform → inspect → validate</text>
+<path class="line" d="M700 665 V725"/>
+
+<rect x="485" y="880" width="430" height="105" rx="20" fill="#fff1dc" stroke="#b77927" stroke-width="2.5"/>
+<text x="700" y="921" text-anchor="middle" class="head">Evidence status stays explicit</text>
+<text x="700" y="953" text-anchor="middle" class="body">Observed ≠ estimated ≠ inferred ≠ invented</text>
+<path class="line" d="M700 840 V870"/>
+
+<text x="700" y="1040" text-anchor="middle" class="body">This is the first layer’s mind map — not the architecture’s list of model layers.</text>
+</svg>
