@@ -26,16 +26,13 @@ These are overlapping domains and candidate categories, not a mandate to create 
 
 ## Candidate responsibilities
 
-1. Establish distinguishable units and preserve identity.
-2. Represent relevant properties and states without conflating them with identity.
-3. Make units available for composition into configurations and more complex structures.
-4. Support domain-specific or explicitly declared constraints.
-5. Keep a construction distinguishable from its written or visual encoding.
-6. Allow new primitives or representational distinctions to be proposed when existing ones are demonstrably insufficient.
-7. Make constructions available to Formulae, Reasoning Formulae, Context, and the shared Framework.
-8. Preserve provenance and distinguish observations, sourced structures, inferences, hypotheses, inventions, and unverified candidates.
+1. Represent constituents across fields: particles, electrons, atoms, elements, chemical and mechanical components, mathematical objects, patterns, abstractions, and symbolic characters including letters, numbers, and operators.
+2. Apply each field’s real-world rules to its constituents and constructions.
+3. Allow rules to be changed, collapsed, removed, or replaced to explore other constructions.
+4. Combine and transform constituents, and propose new ones when needed.
+5. Use the shared Framework’s reasoning hypotheses and mechanisms with real observations and estimates to generate outputs; preserve distinctions between observed, estimated, inferred, and invented information.
 
-These responsibilities are candidates to test, not proof that every operation belongs inside this layer.
+These responsibilities are candidates to test and refine.
 
 ## Important distinctions
 
